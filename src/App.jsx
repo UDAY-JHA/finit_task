@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -12,6 +12,8 @@ import FOOTER from './components/FOOTER.jsx'
 import ABOUTUS from './pages/ABOUTUS.jsx'
 import TEAMEVENTS from './pages/TEAMEVENTS.jsx'
 import CONTACTUS from './pages/CONTACTUS.jsx'
+import Loader from './components/LOADER.jsx'
+
 
 const router = createBrowserRouter([
   {
@@ -50,10 +52,17 @@ const router = createBrowserRouter([
 
 function App() {
   const [count, setCount] = useState(0)
+  const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 2500); // simulate load time
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <>
-      <RouterProvider router={router} />
+
+      
+      {loading ? <Loader /> : <RouterProvider router={router} />}
     </>
        
   )

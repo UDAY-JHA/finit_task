@@ -1,6 +1,73 @@
-@import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-.font-inter{
-    font-family: 'Inter';
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Faster+One&family=Rubik+Glitch&display=swap');
+/* @font-face {
+    font-family: "Inter", sans-serif;
+    src: url('assets/Inter_18pt-Medium.ttf');
+} */
+
+@import "tailwindcss";
+
+@theme{
+    --font-inter:"Inter",'sans';
+    --font-poet:"Poetsen One", sans-serif;
+    --font-js: "Josefin Sans", sans-serif;
+    --font-bungee: "Bungee Shade", sans-serif;
+    --font-rubik: "Rubik Glitch", system-ui;
+    --font-fast: "Faster One", system-ui;
+
+
 }
+
+
+.mybutton {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #3d405b;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 17px;
+    padding: 16px;
+    width: 130px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+   }
+   
+   .mybutton .myspan {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+   }
+   
+   .mybutton .myspan:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: 0.5s;
+   }
+   
+   .mybutton:hover .myspan {
+    padding-right: 15px;
+   }
+   
+   .mybutton:hover .myspan:after {
+    opacity: 1;
+    right: 0;
+   }
+
+   .app {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  

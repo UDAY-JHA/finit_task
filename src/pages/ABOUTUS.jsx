@@ -1,8 +1,9 @@
 import React from 'react'
+import BENTO from '../components/BENTO'
 
 function ABOUTUS() {
   return (
-    <div>ABOUTUS</div>
+    <div>ABOUTUS<BENTO/></div>
   )
 }
 
